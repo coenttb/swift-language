@@ -21,7 +21,7 @@ extension DependencyValues {
 extension Language: DependencyKey {
     public static let liveValue: Self = .english
     public static let testValue: Self = .english
-    public static let previewValue: Self = .dutch
+    public static let previewValue: Self = .english
 }
 
 extension Translated: CustomStringConvertible where A == String {
