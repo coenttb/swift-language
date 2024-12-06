@@ -12,4 +12,4 @@
 @_exported import String
 @_exported import Translated
 @_exported import TranslatedString
-@_exported import Date
+@_exported import Date_Formatted_Localized

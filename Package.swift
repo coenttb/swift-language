@@ -21,7 +21,7 @@ extension String {
     static let string: Self = "String"
     static let translated: Self = "Translated"
     static let translatedString: Self = "TranslatedString"
-    static let date: Self = "Date"
+    static let date: Self = "Date Formatted Localized"
 }
 
 extension Target.Dependency {
