@@ -21,6 +21,7 @@ extension String {
     static let string: Self = "String"
     static let translated: Self = "Translated"
     static let translatedString: Self = "TranslatedString"
+    static let date: Self = "Date"
 }
 
 extension Target.Dependency {
@@ -31,6 +32,7 @@ extension Target.Dependency {
     static var string: Self { .target(name: .string) }
     static var translated: Self { .target(name: .translated) }
     static var translatedString: Self { .target(name: .translatedString) }
+    static var date: Self { .target(name: .date) }
 }
 
 extension Target.Dependency {
@@ -94,7 +96,8 @@ extension Package {
                             .singlePlural,
                             .string,
                             .translated,
-                            .translatedString
+                            .translatedString,
+                            .date
                         ]
                     )
                 ],
@@ -168,6 +171,12 @@ let package = Package.language(
                 .translated,
                 .string
             ]
-        )
+        ),
+        (
+            name: .date,
+            dependencies: [
+                .dependencies
+            ]
+        ),
     ]
 )
