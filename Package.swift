@@ -9,7 +9,6 @@ extension [Package.Dependency] {
             .package(url: "https://github.com/pointfreeco/swift-dependencies", from: "1.1.5"),
         ]
     }
-    
 }
 
 extension String {

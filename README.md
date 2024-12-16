@@ -2,29 +2,22 @@
 
 A Swift package providing cross-platform internationalization and localization support with type-safe language and translation handling.
 
-⚠️ **PACKAGE IN DEVELOPMENT** ⚠️  
-This package is currently under active development and is not ready for production use. APIs may change significantly between versions without notice.
+![Development Status](https://img.shields.io/badge/status-active--development-blue.svg)
+
+This package is currently in active development and is subject to frequent changes. Features and APIs may change without prior notice until a stable release is available.
 
 A Swift package providing robust internationalization and localization support with type-safe language handling, string translations, and date formatting.
 
-## Development Status
-
-- 🚧 Active development
-- ⚠️ Breaking changes expected
-- 📝 Documentation in progress
-- 🧪 Testing incomplete
-- 🔄 API subject to change
-
 ## Features
 
-- 🌍 Support for 180+ languages with ISO 639-1/639-2 codes
-- 🔄 Type-safe language switching and fallbacks
-- 📝 Easy string translations with support for multiple languages
-- 📅 Localized date formatting
-- 🔡 Plural forms support
-- 🎯 Dependency injection support for language preferences
-- 🔄 Automatic locale mapping
-- ✨ Clean, expressive API
+- Support for 180+ languages with ISO 639-1/639-2 codes
+- Type-safe language switching and fallbacks
+- Easy string translations with support for multiple languages
+- Localized date formatting
+- Plural forms support
+- Dependency injection support for language preferences
+- Automatic locale mapping
+- Clean, expressive API
 
 ## Installation
 
@@ -52,10 +45,6 @@ let greeting = TranslatedString(
     spanish: "Hola"
 )
 
-// Get translation for current language
-@Dependency(\.language) var language
-let translatedGreeting = greeting(language)
-
 withDependencies {
     $0.language = .english
 } {
@@ -74,33 +63,26 @@ withDependencies {
     """
 }
 
+// Get inline translation for current language
+@Dependency(\.language) var language
+let translatedGreeting = greeting(language)
+
 // results in "Hallo"
 ```
 
-### Date Formatting
+## Feedback is Much Appreciated!
+  
+If you’re working on your own Swift web project, feel free to learn, fork, and contribute.
 
-```swift
-import Date_Formatted_Localized
+Got thoughts? Found something you love? Something you hate? Let me know! Your feedback helps make this project better for everyone. Open an issue or start a discussion—I’m all ears.
 
-let date = Date()
-let formattedDate = date.formatted(date: .long, time: .none)
-    .localized // Will format according to current locale
-```
-
-## Requirements
-
-- iOS 16.0+ / macOS 13.0+
-- Swift 5.10+
-- Xcode 15.0+
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+> [Subscribe to my newsletter](http://coenttb.com/en/newsletter/subscribe)
+>
+> [Follow me on X](http://x.com/coenttb)
+> 
+> [Link on Linkedin](https://www.linkedin.com/in/tenthijeboonkkamp)
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Credits
-
-Developed and maintained by [coenttb]. Feel free to reach out with any questions or feedback!
+This project is licensed by coenttb under the **Apache 2.0 License**.  
+See [LICENSE](LICENCE) for details.
