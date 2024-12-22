@@ -70,12 +70,6 @@ extension Package {
                         targets: [.languages]
                     )
                 ],
-                [
-                    .library(
-                        name: .language,
-                        targets: [.languages]
-                    )
-                ],
                 names.map { target in
                     .library(
                         name: "\(target)",
