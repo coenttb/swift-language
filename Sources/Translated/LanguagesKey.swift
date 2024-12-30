@@ -10,7 +10,12 @@ import Dependencies
 import Language
 
 public enum LanguagesKey: TestDependencyKey {
-    public static let testValue: Set<Language> = .init(Language.allCases)
+    public static let testValue: Set<Language> = .allCases
+    public static let allLanguages: Set<Language> = .init(Language.allCases)
+}
+
+extension Set<Language> {
+    static let allCases: Self = .init(Language.allCases)
 }
 
 extension DependencyValues {
