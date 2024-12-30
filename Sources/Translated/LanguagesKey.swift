@@ -15,7 +15,7 @@ public enum LanguagesKey: TestDependencyKey {
 }
 
 extension Set<Language> {
-    static let allCases: Self = .init(Language.allCases)
+    public static let allCases: Self = .init(Language.allCases)
 }
 
 extension DependencyValues {
