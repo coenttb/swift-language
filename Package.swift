@@ -154,7 +154,8 @@ let package = Package.language(
         (
             name: .translated,
             dependencies: [
-                .language
+                .language,
+                .dependencies
             ]
         ),
         (
@@ -162,7 +163,7 @@ let package = Package.language(
             dependencies: [
                 .language,
                 .translated,
-                .string
+                .string,
             ]
         ),
         (
