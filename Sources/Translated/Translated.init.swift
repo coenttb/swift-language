@@ -21,11 +21,13 @@ extension Translated {
 
 extension Translated {
     public init(
-        _ all: (Language) -> A
+        _ closure: (Language) -> A
     ) {
+        @Dependency(\.languages) var languages
+        
         self = .init(
-            default: all(.english),
-            dictionary: Dictionary(uniqueKeysWithValues: Language.allCases.map { ($0, all($0)) })
+            default: closure(.english),
+            dictionary: Dictionary(uniqueKeysWithValues: languages.map { ($0, closure($0)) })
         )
     }
 }
